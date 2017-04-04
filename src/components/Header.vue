@@ -8,10 +8,12 @@
       <img :src="imageLink" />
       <p> {{ description }} </p>
     </article>
+    <footerSite></footerSite>
   </section>
 </template>
 
 <script>
+import FooterSite from './Footer.vue'
 export default {
   name: 'header',
   data () {
@@ -21,6 +23,9 @@ export default {
       imageLink: "https://firebasestorage.googleapis.com/v0/b/blog-d25af.appspot.com/o/portfolio%2Fmarie-maxime-tanguay.png?alt=media&token=1a849ce8-e873-49eb-b0c5-207c88315448",
       description: "JavaScript, CSS, ReactJS, Redux, PHP, WordPress"
     }
+  },
+  components:{
+    FooterSite
   }
 }
 </script>
