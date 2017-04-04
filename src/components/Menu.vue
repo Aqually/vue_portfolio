@@ -1,16 +1,8 @@
 <template>
   <div class="container">
-    <input id="toggle" type="checkbox" />
-
-    <label class="toggle-container" for="toggle">
-        <span class="button button-toggle"></span>
-    </label>
-
-
-      <ul v-for="menuItem in menuItems">
-        <li><a clas="nav-item" href="#">{{ menuItem }}</a></li>
-      </ul>
-
+    <ul v-for="menuItem in menuItems">
+      <li><a clas="nav-item" :href="menuItem.link">{{ menuItem.name }}</a></li>
+    </ul>
 </div>
 </template>
 
@@ -20,7 +12,22 @@ export default {
   data () {
     return {
       menuItems: [
-        "PROFIL","PORTFOLIO","À PROPOS","CONTACT"
+        {
+          name: "PROFIL",
+          link: "#"
+        },
+        {
+          name: "PORTFOLIO",
+          link: "/#/portfolio"
+        },
+        {
+          name: "À PROPOS",
+          link: "/#/a-propos"
+        },
+        {
+          name: "CONTACT",
+          link: "/#/contact"
+        }
       ]
     }
   }
